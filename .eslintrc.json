@@ -27,14 +27,15 @@
     "max-lines-per-function": ["error", { "max": 10 }],
     "suwon-test/variable-length": "error",
     "@typescript-eslint/no-unused-vars": "warn",
-    "prettier/prettier": "warn"
+    "prettier/prettier": "off"
   },
   "overrides": [
     {
       "files": ["*.spec.ts"],
       "rules": {
         "max-lines-per-function": ["off", { "max": 10 }],
-        "suwon-test/variable-length": "off"
+        "suwon-test/variable-length": "off",
+        "@typescript-eslint/no-unused-vars": "off"
       }
     }
   ]

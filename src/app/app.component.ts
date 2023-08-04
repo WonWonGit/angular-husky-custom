@@ -10,7 +10,7 @@ export class AppComponent {
   t = 'hello';
 
   test() {
-    const av = 'hello';
+    console.log('hello');
     console.log('hello');
     console.log('hello');
     console.log('hello');
