@@ -25,8 +25,11 @@
     "import/prefer-default-export": "off",
     "class-methods-use-this": "off",
     "max-lines-per-function": ["error", { "max": 10 }],
+    "suwon-test/variable-camel": "error",
     "suwon-test/variable-length": "error",
-    "@typescript-eslint/no-unused-vars": "warn",
+    "suwon-test/interface-name": "error",
+    "suwon-test/enum-variable": "error",
+    "@typescript-eslint/no-unused-vars": "error",
     "prettier/prettier": "off"
   },
   "overrides": [
