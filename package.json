@@ -49,7 +49,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write",
-      "npm run lint --max-warnings"
+      "npm run lint --max-warnings 0"
     ]
   }
 }
