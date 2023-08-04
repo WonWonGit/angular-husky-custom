@@ -14,6 +14,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
+    console.log('test');
   });
 
   it(`should have as title 'angular-eslint-husky-test'`, () => {
