@@ -26,7 +26,8 @@
     "class-methods-use-this": "off",
     "max-lines-per-function": ["error", { "max": 10 }],
     "suwon-test/variable-length": "error",
-    "@typescript-eslint/no-unused-vars": "warn"
+    "@typescript-eslint/no-unused-vars": "warn",
+    "prettier/prettier": "warn"
   },
   "overrides": [
     {
