@@ -3,7 +3,7 @@
     "es6": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "suwon-test"],
   "extends": [
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended"
@@ -24,6 +24,8 @@
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "class-methods-use-this": "off",
-    "max-lines-per-function": ["error", { "max": 10 }]
+    "max-lines-per-function": ["error", { "max": 10 }],
+    "suwon-test/variable-length": "error",
+    "@typescript-eslint/no-unused-vars": "warn"
   }
 }
