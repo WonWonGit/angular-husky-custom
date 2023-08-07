@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-eslint-husky-test';
-  t = 'hello';
 
   test() {
     console.log('hello');
