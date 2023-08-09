@@ -1,0 +1,10 @@
+<div class="input-container">
+  <label>{{ label }}</label>
+  <input
+    [type]="inputType"
+    [class]="className"
+    [placeholder]="placeholder"
+    [formControl]="control"
+    [value]="control.value"
+    [disabled]="className === 'loading' ? true : false" />
+</div>

@@ -4,7 +4,11 @@
   },
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "suwon-test"],
-  "extends": ["prettier", "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:storybook/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
@@ -21,19 +25,17 @@
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "class-methods-use-this": "off",
-    "max-lines-per-function": ["error", { "max": 10 }],
     "suwon-test/variable-camel": "error",
     "suwon-test/variable-length": "error",
     "suwon-test/interface-name": "error",
-    "suwon-test/enum-variable": "error",
     "@typescript-eslint/no-unused-vars": "error",
-    "prettier/prettier": "off"
+    "prettier/prettier": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "overrides": [
     {
       "files": ["*.spec.ts"],
       "rules": {
-        "max-lines-per-function": ["off", { "max": 10 }],
         "suwon-test/variable-length": "off",
         "@typescript-eslint/no-unused-vars": "off"
       }

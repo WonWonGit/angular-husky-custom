@@ -1,0 +1,29 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-container input {
+  width: -webkit-fill-available;
+}
+
+.primary {
+  border: 1px solid darkgray;
+  width: inherit;
+  background-color: whitesmoke;
+}
+
+.error {
+  border: 1px solid #dd3b3b;
+  background-color: #ffe3e2;
+}
+
+.loading {
+  border: 1px solid #2c7312;
+  background: #c7e3bf;
+}
+
+.loading:disabled:hover {
+  cursor: not-allowed;
+}

@@ -24,12 +24,5 @@ module.exports = {
         }
       },
     }),
-    'enum-variable': context => ({
-      TSEnumMember: node => {
-        if (node.id.name !== node.id.name.toUpperCase) {
-          context.report(node, `enum type only capital`);
-        }
-      },
-    }),
   },
 };

@@ -1,0 +1,63 @@
+<div class="login-bg">
+  <div class="login-form">
+    <div class="form-container">
+      <div class="title">
+        <h1>Sign in</h1>
+      </div>
+      <div class="subtitle">
+        <h3>{{ subtitle }}</h3>
+      </div>
+      <form [formGroup]="loginForm">
+        <app-input
+          data-testid="email"
+          label="Email"
+          placeholder="email"
+          inputType="text"
+          [control]="$any(loginForm.controls['userId'])"
+          [className]="
+            buttonType === 'loading'
+              ? inputLoading
+              : loginForm.controls['userId'].errors?.email
+              ? inputError
+              : inputPrimary
+          "></app-input>
+        <ng-container *ngIf="loginForm.controls['userId']?.errors">
+          <div *ngIf="loginForm.controls['userId'].errors" class="error">
+            Must be a valid Email
+          </div>
+        </ng-container>
+        <app-input
+          data-testid="password"
+          label="Password"
+          placeholder="Password"
+          inputType="password"
+          [className]="
+            buttonType === 'loading'
+              ? inputLoading
+              : loginForm.controls['password'].errors
+              ? inputError
+              : inputPrimary
+          "
+          [control]="$any(loginForm.controls['password'])"></app-input>
+        <ng-container *ngIf="loginForm.controls['password']?.errors">
+          <div
+            *ngIf="loginForm.controls['password'].errors?.pattern"
+            class="error">
+            A minimum of 8 characters required, only letters allowed
+          </div>
+        </ng-container>
+        <div>
+          <app-button
+            [buttonLabel]="buttonLabel"
+            [buttonType]="buttonType"
+            (onClick)="testClick()"
+            [buttonDisable]="
+              loginForm.controls['userId'].value === '' ||
+              loginForm.controls['password'].value === ''
+            "></app-button>
+        </div>
+      </form>
+    </div>
+    <div class="img"></div>
+  </div>
+</div>

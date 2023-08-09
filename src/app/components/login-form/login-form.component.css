@@ -1,0 +1,68 @@
+.login-bg {
+  width: 100vw;
+  height: auto;
+  padding: 100px 0;
+  background: #33206c;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background: #e3d8e7;
+  width: 70%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.form-container {
+  width: 500px;
+  padding: 50px;
+  display: flex;
+  background-color: rgba(245, 245, 245, 0.877);
+  height: auto;
+  border-radius: 20px;
+  z-index: 999;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin-left: 50px;
+  box-shadow: 10px 10px 46px -26px rgba(0, 0, 0, 0.75);
+}
+
+.form-container .title {
+  margin-bottom: 20px;
+}
+
+.form-container .subtitle {
+  margin-bottom: 20px;
+  line-height: 50px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .error {
+  margin-top: -10px;
+  font-size: 12px;
+  color: #9c1313;
+  font-weight: 700;
+}
+
+.img {
+  background-image: url('../../../assets/imgs/privacy.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: right;
+  width: 95%;
+  height: 80%;
+  position: absolute;
+}
