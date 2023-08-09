@@ -1,19 +1,6 @@
 {
     "pipes": [],
-    "interfaces": [
-        {
-            "name": "User",
-            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
-            "file": "src/stories/User.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "export interface User {}\n",
-            "properties": [],
-            "indexSignatures": [],
-            "methods": []
-        }
-    ],
+    "interfaces": [],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -87,139 +74,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-b90b455f50216268207168d8dc61d88704f9fedf7a2aa94ea7c8212e7dcfdec690589e3431cd4d724eaa88d24a249b2308527ddfc917b8f2f9e7a38fc9a1c896",
-            "file": "src/stories/button2.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-button",
-            "styleUrls": [
-                "./button.css"
-            ],
-            "styles": [],
-            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\">\n   {{ label }}\n </button>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "backgroundColor",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nWhat background color to use\n",
-                    "description": "<p>What background color to use</p>\n",
-                    "line": 29,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Button'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "pos": 847,
-                            "end": 860,
-                            "flags": 8421376,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 330,
-                            "tagName": {
-                                "pos": 848,
-                                "end": 856,
-                                "flags": 8421376,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 79,
-                                "escapedText": "required"
-                            },
-                            "comment": ""
-                        }
-                    ],
-                    "rawdescription": "\n\nButton contents\n\n",
-                    "description": "<p>Button contents</p>\n",
-                    "line": 43,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "primary",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 23,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "size",
-                    "defaultValue": "'medium'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nHow large should the button be?\n",
-                    "description": "<p>How large should the button be?</p>\n",
-                    "line": 35,
-                    "type": "\"small\" | \"medium\" | \"large\"",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nOptional click handler\n",
-                    "description": "<p>Optional click handler</p>\n",
-                    "line": 49,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { HtmlHTMLAttributes } from 'react';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule],\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\">\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary\n      ? 'storybook-button--primary'\n      : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
-                    "styleUrl": "./button.css"
-                }
-            ],
-            "stylesData": "",
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "[]",
-                        "returnType": "string[]",
-                        "line": 51
-                    }
-                }
-            }
-        },
-        {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-e5c9f88959601c15dc962ecc07ef3682073f422d690544e4a465580cceedc52e7a0d2baec5743a6ec45fd93aaee9d75ab8ab23fb60ad4cc7250a9a82a3544b96-1",
+            "id": "component-ButtonComponent-e5c9f88959601c15dc962ecc07ef3682073f422d690544e4a465580cceedc52e7a0d2baec5743a6ec45fd93aaee9d75ab8ab23fb60ad4cc7250a9a82a3544b96",
             "file": "src/app/components/atoms/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -324,90 +179,11 @@
                 }
             ],
             "stylesData": "",
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "ButtonComponent-1",
             "templateData": "<button\n  (click)=\"click($event)\"\n  [ngClass]=\"buttonType\"\n  [disabled]=\"buttonDisable\">\n  <div class=\"label\">{{ buttonLabel }}</div>\n</button>\n"
         },
         {
-            "name": "HeaderComponent",
-            "id": "component-HeaderComponent-3d494fd89671305c6be07de00e019efdf08f2e36c2169e5fb75a5acdb2841da927e3ef3cbd21cc18f478373a784b1fb90e8b63b9df4b3498a75b652bd9c37b38",
-            "file": "src/stories/header.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-header",
-            "styleUrls": [
-                "./header.css"
-            ],
-            "styles": [],
-            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 65,
-                    "type": "User | null",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 74,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 68,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 71,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-header {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.storybook-header svg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header h1 {\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header button + button {\n  margin-left: 10px;\n}\n\n.storybook-header .welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
-                    "styleUrl": "./header.css"
-                }
-            ],
-            "stylesData": ""
-        },
-        {
             "name": "InputComponent",
-            "id": "component-InputComponent-c2b253e86cb96ec48606fbb9d7c1456a7dd186c9b81ae2af1128020ad013224922620830057d21b9f96b48fc455fc7106d7778549cd08d4dbad5fb61030c1343",
+            "id": "component-InputComponent-95eaf30d56cee0eb84e7d2c65f52d9103d841d992664b59129faa838ee7a83bc3c87f4d5a8acddc860453e8d6fb7a9408d2df17eef24df64e6f15299192a58ac",
             "file": "src/app/components/atoms/input/input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -430,7 +206,7 @@
                     "defaultValue": "InputType.PRIMARY",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 31,
+                    "line": 18,
                     "type": "InputType",
                     "decorators": []
                 },
@@ -438,7 +214,7 @@
                     "name": "control",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 29,
+                    "line": 16,
                     "type": "FormControl<any>",
                     "decorators": []
                 },
@@ -447,7 +223,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 27,
+                    "line": 14,
                     "type": "string",
                     "decorators": []
                 },
@@ -456,7 +232,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 23,
+                    "line": 10,
                     "type": "string",
                     "decorators": []
                 },
@@ -465,7 +241,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 25,
+                    "line": 12,
                     "type": "string",
                     "decorators": []
                 }
@@ -482,7 +258,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  Component,\n  EventEmitter,\n  Input,\n  Optional,\n  Output,\n  Self,\n  Type,\n} from '@angular/core';\nimport {\n  ControlValueAccessor,\n  FormControl,\n  FormControlName,\n  NgControl,\n} from '@angular/forms';\n\n@Component({\n  selector: 'app-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.css'],\n})\nexport class InputComponent {\n  @Input() label: string = '';\n\n  @Input() placeholder: string = '';\n\n  @Input() inputType: string = '';\n\n  @Input() control!: FormControl<any>;\n\n  @Input() className: InputType = InputType.PRIMARY;\n}\n\nexport enum InputType {\n  PRIMARY = 'primary',\n  ERROR = 'error',\n  LOADING = 'loading',\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'app-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.css'],\n})\nexport class InputComponent {\n  @Input() label: string = '';\n\n  @Input() placeholder: string = '';\n\n  @Input() inputType: string = '';\n\n  @Input() control!: FormControl<any>;\n\n  @Input() className: InputType = InputType.PRIMARY;\n}\n\nexport enum InputType {\n  PRIMARY = 'primary',\n  ERROR = 'error',\n  LOADING = 'loading',\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -495,7 +271,7 @@
         },
         {
             "name": "LoginFormComponent",
-            "id": "component-LoginFormComponent-f61f132db972e4f46e7fba0ac36651d7391456e13d64f9dbaca2bf698493761f72347ae7d61bdad13196398a79bfd43870660e8e2776537e530bb77e55ed4c2b",
+            "id": "component-LoginFormComponent-8382f9217d6d293f76863efc36798c4d3833c2ebe1d183c92e933f97b7534e30f7f30277915ee0feb1082df0d1db79e4f8e09c9b33c9227e0f280d6832e6af1f",
             "file": "src/app/components/login-form/login-form.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -518,7 +294,7 @@
                     "defaultValue": "'Hello, Welcome to my test page!'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 29,
+                    "line": 22,
                     "type": "string",
                     "decorators": []
                 }
@@ -533,7 +309,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 37
+                    "line": 30
                 },
                 {
                     "name": "buttonError",
@@ -543,7 +319,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 26
+                    "line": 19
                 },
                 {
                     "name": "buttonLabel",
@@ -553,7 +329,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 33
+                    "line": 26
                 },
                 {
                     "name": "buttonPrimary",
@@ -563,7 +339,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 27
+                    "line": 20
                 },
                 {
                     "name": "buttonType",
@@ -573,7 +349,7 @@
                     "type": "ButtonType",
                     "optional": false,
                     "description": "",
-                    "line": 31
+                    "line": 24
                 },
                 {
                     "name": "emailSubscription",
@@ -583,7 +359,7 @@
                     "type": "Subscription",
                     "optional": false,
                     "description": "",
-                    "line": 39
+                    "line": 32
                 },
                 {
                     "name": "inputClassName",
@@ -593,7 +369,7 @@
                     "type": "InputType",
                     "optional": false,
                     "description": "",
-                    "line": 35
+                    "line": 28
                 },
                 {
                     "name": "inputError",
@@ -603,7 +379,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 22
+                    "line": 15
                 },
                 {
                     "name": "inputLoading",
@@ -613,7 +389,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 24
+                    "line": 17
                 },
                 {
                     "name": "inputPrimary",
@@ -623,7 +399,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 23
+                    "line": 16
                 },
                 {
                     "name": "loginForm",
@@ -632,7 +408,7 @@
                     "type": "FormGroup",
                     "optional": false,
                     "description": "",
-                    "line": 20
+                    "line": 13
                 },
                 {
                     "name": "pwdSubscription",
@@ -642,7 +418,7 @@
                     "type": "Subscription",
                     "optional": false,
                     "description": "",
-                    "line": 41
+                    "line": 34
                 }
             ],
             "methodsClass": [
@@ -652,7 +428,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 55,
+                    "line": 48,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -662,7 +438,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 53,
+                    "line": 46,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -672,7 +448,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 77,
+                    "line": 70,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -686,7 +462,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  AfterViewInit,\n  Component,\n  Input,\n  OnInit,\n  Output,\n  SimpleChanges,\n} from '@angular/core';\nimport { ButtonType } from '../atoms/button/button.component';\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\nimport { InputType } from '../atoms/input/input.component';\nimport { Subscription } from 'rxjs';\n\n@Component({\n  selector: 'app-login-form',\n  templateUrl: './login-form.component.html',\n  styleUrls: ['./login-form.component.css'],\n})\nexport class LoginFormComponent implements OnInit, AfterViewInit {\n  loginForm: FormGroup;\n\n  inputError = InputType.ERROR;\n  inputPrimary = InputType.PRIMARY;\n  inputLoading = InputType.LOADING;\n\n  buttonError = ButtonType.ERROR;\n  buttonPrimary = ButtonType.PRIMARY;\n\n  @Input() subtitle: string = 'Hello, Welcome to my test page!';\n\n  buttonType: ButtonType = ButtonType.PRIMARY;\n\n  buttonLabel: string = 'Login';\n\n  inputClassName: InputType = InputType.PRIMARY;\n\n  buttonDisable: boolean = false;\n\n  emailSubscription: Subscription = new Subscription();\n\n  pwdSubscription: Subscription = new Subscription();\n\n  constructor(private fb: FormBuilder) {\n    this.loginForm = this.fb.group({\n      userId: ['', Validators.email],\n      password: [\n        '',\n        Validators.pattern('^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$'),\n      ],\n    });\n  }\n\n  ngOnInit(): void {}\n\n  ngAfterViewInit() {\n    this.emailSubscription = this.loginForm.controls[\n      'userId'\n    ].valueChanges?.subscribe(() => {\n      if (this.loginForm.controls['userId'].errors?.email) {\n        this.buttonType = ButtonType.ERROR;\n      } else {\n        this.buttonType = ButtonType.PRIMARY;\n      }\n    });\n\n    this.pwdSubscription = this.loginForm.controls[\n      'password'\n    ].valueChanges?.subscribe(() => {\n      if (this.loginForm.controls['password'].errors?.pattern) {\n        this.buttonType = ButtonType.ERROR;\n      } else {\n        this.buttonType = ButtonType.PRIMARY;\n      }\n    });\n  }\n\n  testClick() {\n    this.buttonType = ButtonType.LOADING;\n  }\n}\n\nenum LoginEnume {\n  LOGIN = 'LOGIN',\n}\n",
+            "sourceCode": "import { AfterViewInit, Component, Input, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\nimport { Subscription } from 'rxjs';\nimport { ButtonType } from '../atoms/button/button.component';\nimport { InputType } from '../atoms/input/input.component';\n\n@Component({\n  selector: 'app-login-form',\n  templateUrl: './login-form.component.html',\n  styleUrls: ['./login-form.component.css'],\n})\nexport class LoginFormComponent implements OnInit, AfterViewInit {\n  loginForm: FormGroup;\n\n  inputError = InputType.ERROR;\n  inputPrimary = InputType.PRIMARY;\n  inputLoading = InputType.LOADING;\n\n  buttonError = ButtonType.ERROR;\n  buttonPrimary = ButtonType.PRIMARY;\n\n  @Input() subtitle: string = 'Hello, Welcome to my test page!';\n\n  buttonType: ButtonType = ButtonType.PRIMARY;\n\n  buttonLabel: string = 'Login';\n\n  inputClassName: InputType = InputType.PRIMARY;\n\n  buttonDisable: boolean = false;\n\n  emailSubscription: Subscription = new Subscription();\n\n  pwdSubscription: Subscription = new Subscription();\n\n  constructor(private fb: FormBuilder) {\n    this.loginForm = this.fb.group({\n      userId: ['', Validators.email],\n      password: [\n        '',\n        Validators.pattern('^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$'),\n      ],\n    });\n  }\n\n  ngOnInit(): void {}\n\n  ngAfterViewInit() {\n    this.emailSubscription = this.loginForm.controls[\n      'userId'\n    ].valueChanges?.subscribe(() => {\n      if (this.loginForm.controls['userId'].errors?.email) {\n        this.buttonType = ButtonType.ERROR;\n      } else {\n        this.buttonType = ButtonType.PRIMARY;\n      }\n    });\n\n    this.pwdSubscription = this.loginForm.controls[\n      'password'\n    ].valueChanges?.subscribe(() => {\n      if (this.loginForm.controls['password'].errors?.pattern) {\n        this.buttonType = ButtonType.ERROR;\n      } else {\n        this.buttonType = ButtonType.PRIMARY;\n      }\n    });\n  }\n\n  testClick() {\n    this.buttonType = ButtonType.LOADING;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -708,7 +484,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 41,
+                "line": 34,
                 "jsdoctags": [
                     {
                         "name": "fb",
@@ -726,89 +502,6 @@
                 "AfterViewInit"
             ],
             "templateData": "<div class=\"login-bg\">\n  <div class=\"login-form\">\n    <div class=\"form-container\">\n      <div class=\"title\">\n        <h1>Sign in</h1>\n      </div>\n      <div class=\"subtitle\">\n        <h3>{{ subtitle }}</h3>\n      </div>\n      <form [formGroup]=\"loginForm\">\n        <app-input\n          data-testid=\"email\"\n          label=\"Email\"\n          placeholder=\"email\"\n          inputType=\"text\"\n          [control]=\"$any(loginForm.controls['userId'])\"\n          [className]=\"\n            buttonType === 'loading'\n              ? inputLoading\n              : loginForm.controls['userId'].errors?.email\n              ? inputError\n              : inputPrimary\n          \"></app-input>\n        <ng-container *ngIf=\"loginForm.controls['userId']?.errors\">\n          <div *ngIf=\"loginForm.controls['userId'].errors\" class=\"error\">\n            Must be a valid Email\n          </div>\n        </ng-container>\n        <app-input\n          data-testid=\"password\"\n          label=\"Password\"\n          placeholder=\"Password\"\n          inputType=\"password\"\n          [className]=\"\n            buttonType === 'loading'\n              ? inputLoading\n              : loginForm.controls['password'].errors\n              ? inputError\n              : inputPrimary\n          \"\n          [control]=\"$any(loginForm.controls['password'])\"></app-input>\n        <ng-container *ngIf=\"loginForm.controls['password']?.errors\">\n          <div\n            *ngIf=\"loginForm.controls['password'].errors?.pattern\"\n            class=\"error\">\n            A minimum of 8 characters required, only letters allowed\n          </div>\n        </ng-container>\n        <div>\n          <app-button\n            [buttonLabel]=\"buttonLabel\"\n            [buttonType]=\"buttonType\"\n            (onClick)=\"testClick()\"\n            [buttonDisable]=\"\n              loginForm.controls['userId'].value === '' ||\n              loginForm.controls['password'].value === ''\n            \"></app-button>\n        </div>\n      </form>\n    </div>\n    <div class=\"img\"></div>\n  </div>\n</div>\n"
-        },
-        {
-            "name": "PageComponent",
-            "id": "component-PageComponent-badb6d8cee577661da79ba82ad8f599604afd40fa34e36c7b88d71d77a4fbc7184228cba2f0d73e255d0b7bc51c4c7a8e7b0128b3624aeb0255abab9030fa59a",
-            "file": "src/stories/page.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-page",
-            "styleUrls": [
-                "./page.css"
-            ],
-            "styles": [],
-            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "User | null",
-                    "optional": false,
-                    "description": "",
-                    "line": 64
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "doCreateAccount",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 74,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogin",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 70,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogout",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 66,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-page {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\n.storybook-page h2 {\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-page p {\n  margin: 1em 0;\n}\n\n.storybook-page a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\n.storybook-page ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\n.storybook-page li {\n  margin-bottom: 8px;\n}\n\n.storybook-page .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\n.storybook-page .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\n.storybook-page .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\n.storybook-page .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
-                    "styleUrl": "./page.css"
-                }
-            ],
-            "stylesData": ""
         }
     ],
     "modules": [
@@ -831,6 +524,9 @@
                     "elements": [
                         {
                             "name": "AppComponent"
+                        },
+                        {
+                            "name": "ButtonComponent"
                         },
                         {
                             "name": "InputComponent"
@@ -913,7 +609,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    buttonLabel: 'LOGIN',\n    buttonType: ButtonType.ERROR,\n    inputClassName: InputType.ERROR,\n  },\n  play: async ({ canvasElement, step }) => {\n    const canvas = within(canvasElement);\n\n    await step('Input Reset', async () => {\n      canvas.getByTestId('email').getElementsByTagName('input')[0].className =\n        InputType.PRIMARY;\n      canvas.getByRole('button').className = ButtonType.PRIMARY;\n    });\n\n    await step('Enter invalidate email', async () => {\n      await userEvent.type(\n        canvas.getByTestId('email').getElementsByTagName('input')[0],\n        'anything',\n        { delay: 150 }\n      );\n      canvas.getByTestId('email').getElementsByTagName('input')[0].className =\n        InputType.ERROR;\n    });\n\n    await step('Enter invalidate password', async () => {\n      await userEvent.type(\n        canvas.getByTestId('password').getElementsByTagName('input')[0],\n        'aabbccdd222',\n        { delay: 150 }\n      );\n      canvas\n        .getByTestId('password')\n        .getElementsByTagName('input')[0].className = InputType.ERROR;\n    });\n  },\n}"
+                "defaultValue": "{\n  args: {\n    buttonLabel: 'LOGIN',\n    buttonType: ButtonType.ERROR,\n    inputClassName: InputType.ERROR,\n  },\n  play: async ({ canvasElement, step }) => {\n    const canvas = within(canvasElement);\n\n    await step('Input Reset', async () => {\n      canvas.getByTestId('email').getElementsByTagName('input')[0].className =\n        InputType.PRIMARY;\n      canvas.getByRole('button').className = ButtonType.PRIMARY;\n    });\n\n    await step('Enter invalidate email', async () => {\n      await userEvent.type(\n        canvas.getByTestId('email').getElementsByTagName('input')[0],\n        'anything',\n        { delay: 150 }\n      );\n      canvas.getByTestId('email').getElementsByTagName('input')[0].className =\n        InputType.ERROR;\n    });\n\n    await step('Enter invalidate password', async () => {\n      await userEvent.type(\n        canvas.getByTestId('password').getElementsByTagName('input')[0],\n        'a',\n        { delay: 150 }\n      );\n      canvas\n        .getByTestId('password')\n        .getElementsByTagName('input')[0].className = InputType.ERROR;\n    });\n\n    canvas.getByRole('button').className = ButtonType.ERROR;\n  },\n}"
             },
             {
                 "name": "Error",
@@ -936,16 +632,6 @@
                 "defaultValue": "{\n  args: {\n    label: 'input label',\n    inputType: 'text',\n    placeholder: 'enter anything',\n    className: InputType.ERROR,\n    control: new FormControl('hello'),\n  },\n}"
             },
             {
-                "name": "Large",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button2.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
-            },
-            {
                 "name": "Loading",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -964,76 +650,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    buttonType: ButtonType.LOADING,\n    buttonLabel: 'Button',\n    buttonDisable: false,\n  },\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button2.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Button>",
-                "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Header>",
-                "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: args => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Page>",
-                "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
             },
             {
                 "name": "meta",
@@ -1079,16 +695,6 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button2.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/login-form/Login.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1116,26 +722,6 @@
                 "defaultValue": "{\n  args: {\n    label: 'input label',\n    inputType: 'text',\n    placeholder: 'enter anything',\n    className: InputType.PRIMARY,\n    control: new FormControl('hello'),\n  },\n}"
             },
             {
-                "name": "Secondary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button2.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
-            },
-            {
-                "name": "Small",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button2.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
-            },
-            {
                 "name": "Verify",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1148,39 +734,6 @@
         ],
         "functions": [],
         "typealiases": [
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<Button>",
-                "file": "src/stories/Button2.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 180
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<Header>",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 180
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<Page>",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 180
-            },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
@@ -1273,23 +826,6 @@
                 "deprecationMessage": "",
                 "description": "",
                 "file": "src/app/components/atoms/input/input.component.ts"
-            },
-            {
-                "name": "LoginEnume",
-                "childs": [
-                    {
-                        "name": "LOGIN",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "value": "LOGIN"
-                    }
-                ],
-                "ctype": "miscellaneous",
-                "subtype": "enum",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "file": "src/app/components/login-form/login-form.component.ts"
             }
         ],
         "groupedVariables": {
@@ -1302,7 +838,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    buttonLabel: 'LOGIN',\n    buttonType: ButtonType.ERROR,\n    inputClassName: InputType.ERROR,\n  },\n  play: async ({ canvasElement, step }) => {\n    const canvas = within(canvasElement);\n\n    await step('Input Reset', async () => {\n      canvas.getByTestId('email').getElementsByTagName('input')[0].className =\n        InputType.PRIMARY;\n      canvas.getByRole('button').className = ButtonType.PRIMARY;\n    });\n\n    await step('Enter invalidate email', async () => {\n      await userEvent.type(\n        canvas.getByTestId('email').getElementsByTagName('input')[0],\n        'anything',\n        { delay: 150 }\n      );\n      canvas.getByTestId('email').getElementsByTagName('input')[0].className =\n        InputType.ERROR;\n    });\n\n    await step('Enter invalidate password', async () => {\n      await userEvent.type(\n        canvas.getByTestId('password').getElementsByTagName('input')[0],\n        'aabbccdd222',\n        { delay: 150 }\n      );\n      canvas\n        .getByTestId('password')\n        .getElementsByTagName('input')[0].className = InputType.ERROR;\n    });\n  },\n}"
+                    "defaultValue": "{\n  args: {\n    buttonLabel: 'LOGIN',\n    buttonType: ButtonType.ERROR,\n    inputClassName: InputType.ERROR,\n  },\n  play: async ({ canvasElement, step }) => {\n    const canvas = within(canvasElement);\n\n    await step('Input Reset', async () => {\n      canvas.getByTestId('email').getElementsByTagName('input')[0].className =\n        InputType.PRIMARY;\n      canvas.getByRole('button').className = ButtonType.PRIMARY;\n    });\n\n    await step('Enter invalidate email', async () => {\n      await userEvent.type(\n        canvas.getByTestId('email').getElementsByTagName('input')[0],\n        'anything',\n        { delay: 150 }\n      );\n      canvas.getByTestId('email').getElementsByTagName('input')[0].className =\n        InputType.ERROR;\n    });\n\n    await step('Enter invalidate password', async () => {\n      await userEvent.type(\n        canvas.getByTestId('password').getElementsByTagName('input')[0],\n        'a',\n        { delay: 150 }\n      );\n      canvas\n        .getByTestId('password')\n        .getElementsByTagName('input')[0].className = InputType.ERROR;\n    });\n\n    canvas.getByRole('button').className = ButtonType.ERROR;\n  },\n}"
                 },
                 {
                     "name": "Loading",
@@ -1419,122 +955,6 @@
                     "defaultValue": "{\n  args: {\n    label: 'input label',\n    inputType: 'text',\n    placeholder: 'enter anything',\n    className: InputType.LOADING,\n    control: new FormControl('hello'),\n  },\n}"
                 }
             ],
-            "src/stories/Button2.stories.ts": [
-                {
-                    "name": "Large",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Button>",
-                    "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
-                },
-                {
-                    "name": "Small",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
-                }
-            ],
-            "src/stories/Header.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Header>",
-                    "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: args => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
-                }
-            ],
-            "src/stories/Page.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Page>",
-                    "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
-                }
-            ],
             ".storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -1611,67 +1031,9 @@
                     "description": "",
                     "file": "src/app/components/atoms/input/input.component.ts"
                 }
-            ],
-            "src/app/components/login-form/login-form.component.ts": [
-                {
-                    "name": "LoginEnume",
-                    "childs": [
-                        {
-                            "name": "LOGIN",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "value": "LOGIN"
-                        }
-                    ],
-                    "ctype": "miscellaneous",
-                    "subtype": "enum",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "file": "src/app/components/login-form/login-form.component.ts"
-                }
             ]
         },
         "groupedTypeAliases": {
-            "src/stories/Button2.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Button>",
-                    "file": "src/stories/Button2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 180
-                }
-            ],
-            "src/stories/Header.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Header>",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 180
-                }
-            ],
-            "src/stories/Page.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Page>",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 180
-                }
-            ],
             "src/app/components/login-form/Login.stories.ts": [
                 {
                     "name": "Story",
@@ -1733,7 +1095,7 @@
         ]
     },
     "coverage": {
-        "count": 2,
+        "count": 0,
         "status": "low",
         "files": [
             {
@@ -1900,152 +1262,6 @@
                 "name": "LoginFormComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/18",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button2.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Large",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button2.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button2.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button2.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button2.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/User.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "User",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/button2.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 83,
-                "coverageCount": "5/6",
-                "status": "very-good"
-            },
-            {
-                "filePath": "src/stories/header.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "HeaderComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/page.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "PageComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
                 "status": "low"
             }
         ]
